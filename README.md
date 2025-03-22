@@ -1,107 +1,106 @@
-# SNCF Train Prices Scraper 🚅
+# 🚅 SNCF Web Scraper de Prix de Trains 
 
 ## Description
 
-This Python script automates the process of retrieving train ticket prices from SNCF Connect (sncf-connect.com). It uses Selenium WebDriver to simulate user interactions and extract pricing information for train journeys between specified French cities.
+Ce script Python automatise la recherche de prix des billets de train sur SNCF Connect (sncf-connect.com). Il utilise Selenium WebDriver pour simuler les interactions utilisateur et extraire les informations de prix pour les voyages en train entre les villes françaises spécifiées.
 
-## Features
+## Fonctionnalités
 
-- Automated search for train tickets between any two French cities
-- Extracts multiple journey options with detailed information:
-  - Departure and arrival times
-  - Station names
-  - First and second class prices
-- Uses real Chrome profile to avoid detection
-- Implements human-like behavior with random delays and mouse movements
-- Handles dynamic page loading and suggestions
+- Recherche automatisée de billets de train entre deux villes françaises
+- Extraction de multiples options de voyage avec informations détaillées :
+  - Heures de départ et d'arrivée
+  - Noms des gares
+  - Prix en première et seconde classe
+- Utilisation d'un profil Chrome réel pour éviter la détection
+- Implémentation d'un comportement humain avec délais aléatoires et mouvements de souris
+- Gestion du chargement dynamique des pages et des suggestions
 
-## Prerequisites
+## Prérequis
 
 - Python 3.x
-- Google Chrome browser
+- Navigateur Google Chrome
 - Chrome WebDriver
-- A valid Chrome profile
+- Un profil Chrome valide
 
-## Required Libraries
+## Bibliothèques Requises
 
 ```bash
-pip install selenium
-pip install webdriver-manager
+pip install -r requirements.txt
 ```
 
 ## Configuration
 
-Before running the script, you need to set up your Chrome profile path. By default, it's configured for Windows:
+Avant d'exécuter le script, vous devez configurer le chemin de votre profil Chrome. Par défaut, il est configuré pour Windows :
 
 ```python
 options.add_argument(r"--user-data-dir=C:\Users\coach\AppData\Local\Google\Chrome\User Data")
 options.add_argument(r"--profile-directory=Default")
 ```
 
-Modify these paths according to your system configuration.
+Modifiez ces chemins selon votre configuration système.
 
-## Usage
+## Utilisation
 
-1. Run the script:
+1. Lancez le script :
 ```bash
 python sncf_scraper.py
 ```
 
-2. Enter the requested information when prompted:
-- Departure city
-- Arrival city
+2. Saisissez les informations demandées :
+- Ville de départ
+- Ville d'arrivée
 
-3. The script will:
-- Open Chrome with your profile
-- Navigate to SNCF Connect
-- Input your travel details
-- Extract and display available train options
-- Show prices for both first and second class
+3. Le script va :
+- Ouvrir Chrome avec votre profil
+- Naviguer vers SNCF Connect
+- Saisir vos détails de voyage
+- Extraire et afficher les options de train disponibles
+- Montrer les prix en première et seconde classe
 
-## Output Example
+## Exemple de Sortie
 
 ```
-Prix recommandé: 45€
+Prix recommandé : 45€
 -------------------
-Départ: 10:30 de PARIS GARE DE LYON
-Arrivée: 12:30 à LYON PART DIEU
-1er Prix: 89€ / 2ème Prix: 45€
+Départ : 10:30 de PARIS GARE DE LYON
+Arrivée : 12:30 à LYON PART DIEU
+1er Prix : 89€ / 2ème Prix : 45€
 -------------------
 ```
 
-## Important Notes
+## Notes Importantes
 
-- The script uses your real Chrome profile to avoid CAPTCHA and authentication issues
-- Random delays are implemented to simulate human behavior
-- Keep the Chrome window visible during execution
-- Do not interact with the browser while the script is running
-- The script includes a 10-second delay at the end before closing
+- Le script utilise votre vrai profil Chrome pour éviter les CAPTCHA et les problèmes d'authentification
+- Des délais aléatoires sont implémentés pour simuler un comportement humain
+- Gardez la fenêtre Chrome visible pendant l'exécution
+- N'interagissez pas avec le navigateur pendant l'exécution du script
+- Le script inclut un délai de 10 secondes à la fin avant la fermeture
 
-## Technical Details
+## Détails Techniques
 
-The script utilizes several Selenium features:
-- WebDriverWait for handling dynamic content
-- ActionChains for simulating mouse movements
-- JavaScript execution for smooth scrolling and input handling
-- CSS and XPath selectors for element location
+Le script utilise plusieurs fonctionnalités de Selenium :
+- WebDriverWait pour gérer le contenu dynamique
+- ActionChains pour simuler les mouvements de souris
+- Exécution JavaScript pour le défilement fluide et la gestion des entrées
+- Sélecteurs CSS et XPath pour la localisation des éléments
 
 ## Limitations
 
-- Works only with SNCF Connect's current layout (as of 2025)
-- Requires a stable internet connection
-- May need adjustments if SNCF Connect updates their website structure
+- Fonctionne uniquement avec la disposition actuelle de SNCF Connect (Février 2025)
+- Nécessite une connexion Internet stable
+- Peut nécessiter des ajustements si SNCF Connect met à jour la structure de leur site
 
-## Legal Notice
+## Notice Légale
 
-This script is for educational purposes only. Make sure to comply with SNCF Connect's terms of service when using automated tools.
+Ce script est uniquement à des fins éducatives. Assurez-vous de respecter les conditions d'utilisation de SNCF Connect lors de l'utilisation d'outils automatisés.
 
-## Contributing
+## Contribution
 
-Feel free to submit issues and enhancement requests!
+N'hésitez pas à soumettre des problèmes et des demandes d'amélioration !
 
-## License
+## Licence
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
 
 ---
-Made with ❤️ for Wild Code School Lille group working on train travel automation
+Fait avec ❤️ pour le groupe de la Wild Code School qui travaille sur l'automatisation des voyages en train
