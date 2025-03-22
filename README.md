@@ -1,4 +1,4 @@
-# 🚅 SNCF Web Scraper de Prix de Trains 
+# 🚅 SNCF Web Scraping de Prix de Trains 
 
 ## Description
 
