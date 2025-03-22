@@ -93,14 +93,3 @@ Le script utilise plusieurs fonctionnalités de Selenium :
 ## Notice Légale
 
 Ce script est uniquement à des fins éducatives. Assurez-vous de respecter les conditions d'utilisation de SNCF Connect lors de l'utilisation d'outils automatisés.
-
-## Contribution
-
-N'hésitez pas à soumettre des problèmes et des demandes d'amélioration !
-
-## Licence
-
-Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
-
----
-Fait avec ❤️ pour le groupe de la Wild Code School qui travaille sur l'automatisation des voyages en train
